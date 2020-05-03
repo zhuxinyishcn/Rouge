@@ -23,6 +23,12 @@ import rouge.code.community.dto.GitHubUserDTO;
 @Component
 public class GitHubProvider {
 
+  /**
+   * @description: Using a access token object send a POST Request to GitHub server and get actual
+   * access token
+   * @param: [accessTokenDTO]
+   * @return: java.lang.String
+   **/
   public String getAccessToken(AccessTokenDTO accessTokenDTO) throws IOException {
     final MediaType MEDIA_TYPE_MARKDOWN
         = MediaType.get("application/json; charset=utf-8");
@@ -41,6 +47,11 @@ public class GitHubProvider {
     }
   }
 
+  /**
+   * @description: Using access token send a GET request to GitHub server to get the user info
+   * @param: [accessToken]
+   * @return: rouge.code.community.dto.GitHubUserDTO
+   **/
   public GitHubUserDTO getUser(String accessToken) throws IOException {
     final OkHttpClient client = new OkHttpClient();
     Request request = new Request.Builder()
@@ -51,6 +62,7 @@ public class GitHubProvider {
         throw new IOException("Unexpected code " + response);
       }
       Gson gson = new Gson();
+      //return a json formatt user info
       return gson.fromJson(Objects.requireNonNull(response.body()).string(), GitHubUserDTO.class);
     }
   }

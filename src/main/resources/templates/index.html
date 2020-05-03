@@ -5,7 +5,7 @@
  * @GitHub: https://github.com/zhuxinyishcn
  * @Description: file info
  * @LastEditors: Xinyi Zhu
- * @LastEditTime: 2020-05-01 14:30:06
+ * @LastEditTime: 2020-05-02 18:30:50
  -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -63,26 +63,18 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item dropdown" th:if="${session.userInfo!=null}">
             <a
-              class="nav-link"
-              style="color: white;"
-              href="https://github.com/login/oauth/authorize?client_id=2697703126ad99441817&redirect_uri=http://localhost:8887/callback&scope=user&state=39aa7806"
-              >Login</a
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                style="color: white;"
+                th:text="${session.userInfo.getName()}"
             >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              style="color: white;"
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Profile</a>
@@ -90,6 +82,14 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Log out</a>
             </div>
+          </li>
+          <li class="nav-item" th:if="${session.userInfo==null}">
+            <a
+                class="nav-link"
+                href="https://github.com/login/oauth/authorize?client_id=2697703126ad99441817&redirect_uri=http://localhost:8887/callback&scope=user&state=39aa7806"
+                style="color: white;"
+            >Login</a
+            >
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
