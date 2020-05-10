@@ -1,0 +1,33 @@
+2020-05-08 15:48:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users: [42102-200]
+2020-05-08 15:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users: [42102-200]
+2020-05-08 15:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users [42102-200]
+2020-05-08 15:48:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from users[*]""flyway_schema_history;"; SQL statement:
+select * from users"flyway_schema_history; [42000-200]
+2020-05-08 15:48:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from users[*]""flyway_schema_history;"; SQL statement:
+select * from users"flyway_schema_history; [42000-200]
+2020-05-08 15:48:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERSFLYWAY_SCHEMA_HISTORY" not found; SQL statement:
+select * from usersflyway_schema_history [42102-200]
+2020-05-08 15:48:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users flyway_schema_history [42102-200]
+2020-05-08 15:48:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users flyway_schema_history [42102-200]
+2020-05-08 15:48:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users flyway_schema_history [42102-200]
+2020-05-08 15:48:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FLYWAY_SCHEMA_HISTORY" not found; SQL statement:
+select * from  flyway_schema_history [42102-200]
+2020-05-08 15:48:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FLYWAY_SCHEMA_HISTORY" not found; SQL statement:
+select * from  flyway_schema_history [42102-200]

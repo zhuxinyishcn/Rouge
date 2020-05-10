@@ -3,7 +3,9 @@ package rouge.code.community.controller;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -42,7 +44,8 @@ public class AuthorizationController {
   public String callback(
       @RequestParam(name = "code") String code,
       @RequestParam(name = "state") String state,
-      HttpServletRequest request) throws IOException {
+      HttpServletRequest request,
+      HttpServletResponse repsond) throws IOException {
     AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
     accessTokenDTO.setClient_id(this.client_id);
     accessTokenDTO.setClient_secret(this.client_secret);
@@ -56,12 +59,15 @@ public class AuthorizationController {
       final User user = new User();
       user.setName(userInfo.getName());
       user.setAccountId(Long.toString(userInfo.getId()));
-      user.setToken(UUID.randomUUID().toString());
+      final String token = UUID.randomUUID().toString();
+      user.setToken(token);
       user.setGmtCreate(System.currentTimeMillis());
       user.setGmtModified(user.getGmtCreate());
       userMapper.insertUser(user);
-      request.getSession().setAttribute("userInfo", userInfo);
+      repsond.addCookie(new Cookie("token", token));
     });
     return githubUser.isPresent() ? "redirect:/" : "index";
   }
+
+
 }

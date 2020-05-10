@@ -32,5 +32,4 @@ build/
 
 
 ###H2-database###
-./data
-*.db
+./data/h2database.trace.db

@@ -5,7 +5,7 @@
  * @GitHub: https://github.com/zhuxinyishcn
  * @Description: file info
  * @LastEditors: Xinyi Zhu
- * @LastEditTime: 2020-05-02 18:30:50
+ * @LastEditTime: 2020-05-07 17:44:17
  -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -65,15 +65,15 @@
           </li>
           <li class="nav-item dropdown" th:if="${session.userInfo!=null}">
             <a
-                aria-expanded="false"
-                aria-haspopup="true"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                style="color: white;"
-                th:text="${session.userInfo.getName()}"
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              style="color: white;"
+              th:text="${session.userInfo.getName()}"
             >
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -85,10 +85,10 @@
           </li>
           <li class="nav-item" th:if="${session.userInfo==null}">
             <a
-                class="nav-link"
-                href="https://github.com/login/oauth/authorize?client_id=2697703126ad99441817&redirect_uri=http://localhost:8887/callback&scope=user&state=39aa7806"
-                style="color: white;"
-            >Login</a
+              class="nav-link"
+              href="https://github.com/login/oauth/authorize?client_id=2697703126ad99441817&redirect_uri=http://localhost:8887/callback&scope=user&state=39aa7806"
+              style="color: white;"
+              >Login</a
             >
           </li>
         </ul>
