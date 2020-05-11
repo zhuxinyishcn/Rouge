@@ -5,7 +5,7 @@
  * @GitHub: https://github.com/zhuxinyishcn
  * @Description: file info
  * @LastEditors: Xinyi Zhu
- * @LastEditTime: 2020-05-10 11:42:07
+ * @LastEditTime: 2020-05-10 21:43:37
  -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -63,6 +63,7 @@
             <a class="nav-link" href="#" style="color: white;"
               >Home <span class="sr-only">(current)</span></a
             >
+        
           </li>
           <li class="nav-item dropdown" th:if="${session.userInfo != null}">
             <a
@@ -106,9 +107,9 @@
         </form>
       </div>
     </nav>
-    <div class="container-fluid publish">
+    <div class="container-fluid" style="margin-top: 55px;margin-left: 40px;">
       <div class="row">
-        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12 col-12">
           <h2>
             <svg
               class="bi bi-file-post"
@@ -135,8 +136,8 @@
             </svg>
             Publish
           </h2>
-          <form action="">
-            <div class="form-group col-9">
+          <form action="../templates/publish.html" method="Post">
+            <div class="form-group col-11">
               <label for="summary"
                 >Summary (Remember to be simple and straightforward):</label
               >
@@ -152,7 +153,7 @@
                 >(100 characters or less)</small
               >
             </div>
-            <div class="form-group col-9">
+            <div class="form-group col-11">
               <label for="details">Details</label>
               <textarea
                 class="form-control"
@@ -162,7 +163,7 @@
                 placeholder="Start Typing..."
               ></textarea>
             </div>
-            <div class="form-group col-9">
+            <div class="form-group col-11">
               <svg
                 class="bi bi-tag-fill"
                 width="1em"
@@ -209,9 +210,10 @@
               <label class="custom-file-label col-md-auto" for="inputGroupFile"
                 >Choose file to upload</label
               >
+              <span></span>
             </div>
           </form>
-          <div class="float-right col-lg-4">
+          <div class="float-right col-2">
             <button type="button" class="btn btn-success"><b>Post !</b></button>
           </div>
         </div>
@@ -219,7 +221,7 @@
           <h3>
             <svg
               class="bi bi-text-indent-left"
-              width="50"
+              width="30"
               height="auto"
               viewBox="0 0 16 16"
               fill="currentColor"
@@ -233,7 +235,13 @@
             </svg>
             Format For a Post
           </h3>
-          <p>1.Make sure you put a tag :)</p>
+          <p>&#8226 Summary: Describe the post 100 characters or less</p>
+          <p>&#8226 Detail: Use images and text to share your notes</p>
+          <p>&#8226 Tag: Make sure you put one or more tag :)</p>
+          <hr>
+          <h3>🔥 Hot Topic</h3>
+          <a href="https://www.w3schools.com/html/">Java Stream I/O</a><br> 
+          <a href="https://www.w3schools.com/html/">Python try catch finally</a>
         </div>
       </div>
     </div>

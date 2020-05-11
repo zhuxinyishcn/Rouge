@@ -59,15 +59,12 @@ public class AuthorizationController {
       final User user = new User();
       user.setName(userInfo.getName());
       user.setAccountId(Long.toString(userInfo.getId()));
-      final String token = UUID.randomUUID().toString();
-      user.setToken(token);
+      user.setToken(UUID.randomUUID().toString());
       user.setGmtCreate(System.currentTimeMillis());
       user.setGmtModified(user.getGmtCreate());
       userMapper.insertUser(user);
-      repsond.addCookie(new Cookie("token", token));
+      repsond.addCookie(new Cookie("token", user.getToken()));
     });
     return githubUser.isPresent() ? "redirect:/" : "index";
   }
-
-
 }
