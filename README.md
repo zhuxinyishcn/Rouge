@@ -5,7 +5,7 @@
  * @GitHub: https://github.com/zhuxinyishcn
  * @Description: file info
  * @LastEditors: Xinyi Zhu
- * @LastEditTime: 2020-05-07 17:29:36
+ * @LastEditTime: 2020-05-27 11:16:36
  -->
 <h1 align="center"><a href="https://github.com/zhuxinyishcn/Rouge" target="_blank"><strong>📔Rouge</strong></a></h1>
 
@@ -37,3 +37,10 @@ This a small community for users to share their notes and new discovery in life.
 
 ## Preview
 
+### Browsers
+
+![Chrome](./src/main/resources/images/preview.PNG)
+
+### Mobile device
+
+![IPhone](./src/main/resources/images/mobilePreview.PNG)

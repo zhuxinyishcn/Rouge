@@ -34,11 +34,11 @@ public class AuthorizationController {
   private UserMapper userMapper;
 
   @Value("${github.client.id}")
-  private String client_id;
+  private String clientId;
   @Value("${github.client.secret}")
-  private String client_secret;
+  private String clientSecret;
   @Value("${github.redirect.uri}")
-  private String redirect_uri;
+  private String redirectUri;
 
   @GetMapping("/callback")
   public String callback(
@@ -47,10 +47,10 @@ public class AuthorizationController {
       HttpServletRequest request,
       HttpServletResponse repsond) throws IOException {
     AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
-    accessTokenDTO.setClient_id(this.client_id);
-    accessTokenDTO.setClient_secret(this.client_secret);
+    accessTokenDTO.setClient_id(this.clientId);
+    accessTokenDTO.setClient_secret(this.clientSecret);
     accessTokenDTO.setCode(code);
-    accessTokenDTO.setRedirect_uri(this.redirect_uri);
+    accessTokenDTO.setRedirect_uri(this.redirectUri);
     accessTokenDTO.setState(state);
     final String accessToken = this.gitHubProvider.getAccessToken(accessTokenDTO);
     Optional<GitHubUserDTO> githubUser = Optional
