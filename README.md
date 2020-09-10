@@ -5,7 +5,7 @@
  * @GitHub: https://github.com/zhuxinyishcn
  * @Description: file info
  * @LastEditors: Xinyi Zhu
- * @LastEditTime: 2020-05-27 11:16:36
+ * @LastEditTime: 2020-09-09 21:01:13
  -->
 <h1 align="center"><a href="https://github.com/zhuxinyishcn/Rouge" target="_blank"><strong>📔Rouge</strong></a></h1>
 
@@ -27,7 +27,7 @@
 > - [**Gson**](https://sites.google.com/site/gson/gson-user-guide): It help us better manage the Http response after we sent the get request to Google cloud
 > - [**JUnit**](https://junit.org/junit5/): JUnit is helpful Library t o design and implement a test suite
 > - [**Lombok**](https://projectlombok.org/): Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.
-> - [**Flyway**](https://projectlombok.org/): Version control for your database.Robust schema evolution across all your environments.With ease, pleasure and plain SQL.
+> - [**Flyway**](https://projectlombok.org/): Version control for your database.Robust schema evolution across all your  environments.With ease, pleasure and plain SQL.
 
 ## Instructions to build and run the program
 
