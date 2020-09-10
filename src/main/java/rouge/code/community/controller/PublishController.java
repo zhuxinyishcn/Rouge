@@ -2,7 +2,6 @@ package rouge.code.community.controller;
 
 import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -60,7 +59,6 @@ public class PublishController {
       model.addAttribute("error", "Your tag can not be empty");
       return "publish";
     }
-
     Optional<User> user = Optional
         .ofNullable(userMapper.findByToken(token));
     //check if user login, otherwise return back to publish page
