@@ -35,3 +35,4 @@ build/
 ./data
 ./data/h2database.mv.db
 ./data/h2database.trace.db
+node_modules
