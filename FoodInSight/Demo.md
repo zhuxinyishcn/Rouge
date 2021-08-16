@@ -1,7 +1,7 @@
 
 
 
-[![IMAGE ALT TEXT HERE](./PREVIEW.PNG)](https://www.youtube.com/watch?v=SCDXiG0GnbQ)
+[![IMAGE ALT TEXT HERE](./preview.PNG)](https://www.youtube.com/watch?v=SCDXiG0GnbQ)
 
 ---
 <h2 align="center">AI-based Food Image Processing (Cross-Platform Mobile Application)</h2>
