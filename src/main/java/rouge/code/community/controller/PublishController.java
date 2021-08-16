@@ -46,7 +46,7 @@ public class PublishController {
     model.addAttribute("summary", summary);
     model.addAttribute("detail", detail);
     model.addAttribute("tag", tag);
-    //check if user have vaild summary, detail, tags, otherwise return to publish page
+    //check if user have valid summary, detail, tags, otherwise return to publish page
     if (summary == null || summary.isEmpty()) {
       model.addAttribute("error", "Your summary can not be empty");
       return "publish";
