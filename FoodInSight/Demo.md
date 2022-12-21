@@ -73,6 +73,4 @@ This page allows a user to view information and change it as well. A user can ch
 ---
 [![IMAGE ALT TEXT HERE](./Home.PNG)](https://docs.google.com/presentation/d/1fP5i42WlPSE1PJjoXLVO5T6uHf7S3QwjWgx28vzzHS4/edit#slide=id.gd2774ed1de_4_20)
 
-# Process workflow
----
- ![](./design.jpg) 
+
